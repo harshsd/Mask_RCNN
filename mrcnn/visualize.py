@@ -100,6 +100,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
     """
     # Number of instances
     N = boxes.shape[0]
+    print (boxes.shape)
     if not N:
         print("\n*** No instances to display *** \n")
     else:
@@ -150,6 +151,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
 
         # Mask
         mask = masks[:, :, i]
+
         if show_mask:
             masked_image = apply_mask(masked_image, mask, color)
 
